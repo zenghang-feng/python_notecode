@@ -1,11 +1,13 @@
-﻿&emsp;&emsp;在一些场景下，需要把算法或者机器学习模型进行封装，为其他程序调用。本文采用 Python 的 Flask 模块实现了几种不同的API创建、调用的方式。
+（文章来自2023.03.13的博客）  
+
+&emsp;&emsp;在一些场景下，需要把算法或者机器学习模型进行封装，为其他程序调用。本文采用 Python 的 Flask 模块实现了几种不同的API创建、调用的方式。
 &emsp;&emsp;API：应用程序接口（Application Programming Interface，简称：API），主要目的是提供应用程序与开发人员以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。
 &emsp;&emsp;API可以看作一个服务器，调用API的程序可以看作是客户端，客户端向API发送请求，然后获取希望得到的数据。
     ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/59496603bce6059a29ae721205055196.png)
 &emsp;&emsp;下文使用Flask模块创建API，使用Requsets模块作为客户端向API发送请求。
 # 1、基于GET的带参数请求
 ## 1.1 API（服务端）
-&emsp;&emsp;首先是基于GET的带参数请求（GET和POST的区别可以参考：https://www.zhihu.com/question/28586791），这里GET请求中的参数是以字典的格式存储，创建API的代码如下：
+&emsp;&emsp;首先是基于GET的带参数请求（GET和POST的区别可以参考：https://www.zhihu.com/question/28586791 ），这里GET请求中的参数是以字典的格式存储，创建API的代码如下：
 
 ```python
 # 导入需要的模块
